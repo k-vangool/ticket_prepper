@@ -3,7 +3,7 @@ A script to prepare the tickets for edgeconnex locations.
 
 To run the ticket prepper:
 - Export the tickets from edgeos.edgeconnex.com, while you're logged in.
-- Change the name of the .xlsx file to: "input_tickets.xlsx".
+- Change the name of the .xlsx file to: "input_tickets.xlsx" and put it in the same folder as ticket_prepper.exe.
 - Run ticket_prepper.exe
 - The script will do two things: 
       * Open a browser window which will have all the to be checked tickets opened.
