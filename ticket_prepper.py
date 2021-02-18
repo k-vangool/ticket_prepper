@@ -100,15 +100,16 @@ def open_tickets():
     save_path = os.path.join(askdirectory(), new_file_name)
 
     # Saving Excel + wrapping text.
-    writer = pd.ExcelWriter(save_path, engine='xlsxwriter')
+    writer = pd.ExcelWriter(save_path)
     relevant_tickets_SOC.to_excel(writer,
                                   sheet_name='Relevant tickets SOC',
                                   index=False
                                   )
-    workbook = writer.book
-    worksheet = writer.sheets['Relevant tickets SOC']
-    format = workbook.add_format({'text_wrap': True})
-    worksheet.set_column('A:I', None, format)
+    # workbook = writer.book
+    # worksheet = writer.sheets['Relevant tickets SOC']
+    # format = workbook.add_format({'text_wrap': True})
+    # worksheet.set_column('A:I', None, format)
+    writer.save()
 
     # Opening the tickets in a new chrome browser window
     wb.register('chrome', None, wb.BackgroundBrowser(chrome_path))
