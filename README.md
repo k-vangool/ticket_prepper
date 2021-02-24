@@ -1,15 +1,16 @@
 # ticket_prepper
-A script to prepare the tickets for edgeconnex locations.
+A script to prepare the tickets for edgeconnex locations. Currently only supports AMS01.
 
 To run the ticket prepper:
 - Export the tickets from edgeos.edgeconnex.com, while you're logged in.
-- Change the name of the .xlsx file to: "input_tickets.xlsx" and put it in the same folder as ticket_prepper.exe.
+- Make sure the file extension is .xlsx, other extensions are not supported. 
 - Run ticket_prepper.exe
-- The script will do two things: 
-      * Open a browser window which will have all the to be checked tickets opened.
-      * Return the excel file: "tickets_DATE.xlsx" which contains solely the tickets concerned to SOC.
+- The program does the following:
+	* Lets you select the file that contains the tickets that need to be opened.
+	* Opens each and every ticket that is relevant for the SOC in a seperate chrome window.
+	* Returns a file with relevant tickets, although one could use the original file.
       
-**Future updates**
+**Possible Future Updates**
 
 Features that might be added:
 - Automatically updating the tickets with the correct responses.
